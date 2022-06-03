@@ -16,45 +16,49 @@ function playGame() {
 	let cpuScore = 0;
 	let playerScore = 0;
 	let proceed = 0;
-	let cpuChoice = cpuSelection();
 
-	//? Loop while input is incorrect
-	while (proceed === 0) {
-		playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
-		if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-			proceed++;
+	for (let i = 0; i < 5; i++) {
+		//? Loop while input is incorrect
+		while (proceed === 0) {
+			playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
+			if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+				proceed++;
+			}
 		}
-	}
 
-	//? Determine outcome of one round
-	function playRound(playerChoice, cpuChoice) {
-		let choices = playerChoice + ' ' + cpuChoice;
-		switch (choices) {
-			case 'rock scissors':
-			case 'paper rock':
-			case 'scissors paper':
-				playerScore++;
-				return 'You Win!';
+		let cpuChoice = cpuSelection();
 
-			case 'scissors rock':
-			case 'rock paper':
-			case 'paper scissors':
-				cpuScore++;
-				return 'You Lose!';
+		//? Determine outcome of one round
+		function playRound(playerChoice, cpuChoice) {
+			let choices = playerChoice + ' ' + cpuChoice;
+			switch (choices) {
+				case 'rock scissors':
+				case 'paper rock':
+				case 'scissors paper':
+					playerScore++;
+					return 'You Win!';
 
-			case 'rock rock':
-			case 'paper paper':
-			case 'scissors scissors':
-				return 'Tie Game!';
+				case 'scissors rock':
+				case 'rock paper':
+				case 'paper scissors':
+					cpuScore++;
+					return 'You Lose!';
 
-			default:
-				'Invalid choice';
+				case 'rock rock':
+				case 'paper paper':
+				case 'scissors scissors':
+					return 'Tie Game!';
+
+				default:
+					'Invalid choice';
+			}
 		}
-	}
 
-	let winner = playRound(playerChoice, cpuChoice);
-	console.log('----------------------------------');
-	console.log(winner);
-	console.log(`You: ${playerChoice} || CPU ${cpuChoice}`);
-	proceed--;
+		//? Print results of one round
+		let winner = playRound(playerChoice, cpuChoice);
+		console.log('----------------------------------');
+		console.log(winner);
+		console.log(`You: ${playerChoice} || CPU ${cpuChoice}`);
+		proceed--;
+	}
 }
