@@ -15,14 +15,6 @@ function playGame() {
 	let playerScore = 0;
 	let proceed = 0;
 
-	//? Loop while input is incorrect
-	while (proceed === 0) {
-		playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
-		if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-			proceed++;
-		}
-	}
-
 	let cpuChoice = cpuSelection();
 
 	//? Determine outcome of one round
