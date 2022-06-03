@@ -1,6 +1,4 @@
 console.log('Lets Play Rock - Paper - Scissors!');
-console.log('Enter "playGame()" to play');
-console.log('----------------------------------');
 
 //? Initialize variables
 const options = [ 'rock', 'paper', 'scissors' ];
@@ -17,7 +15,8 @@ function playGame() {
 	let playerScore = 0;
 	let proceed = 0;
 
-	for (let i = 0; i < 5; i++) {
+	//? Loop for 5 rounds
+	for (let i = 0; i < 2; i++) {
 		//? Loop while input is incorrect
 		while (proceed === 0) {
 			playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
@@ -58,7 +57,28 @@ function playGame() {
 		let winner = playRound(playerChoice, cpuChoice);
 		console.log('----------------------------------');
 		console.log(winner);
-		console.log(`You: ${playerChoice} || CPU ${cpuChoice}`);
+		console.log(`You picked: ${playerChoice} || CPU picked: ${cpuChoice}`);
+		console.log(`Your score: ${playerScore} || CPU score: ${cpuScore}`);
 		proceed--;
+
+		//? 5 game loop finishes here
 	}
+
+	//? Print final results of 5 rounds
+	console.log('----------------------------------');
+	console.log(`FINAL SCORES - You: ${playerScore} || CPU: ${cpuScore}`);
+
+	if (playerScore > cpuScore) {
+		console.log(`Nice! ${playerScore} games won!`);
+		return 'You win!';
+	} else if (playerScore < cpuScore) {
+		console.log(`Bad luck! CPU won ${cpuScore} games!`);
+		return 'You lose!';
+	} else if (playerScore === cpuScore) {
+		console.log(`You are both evenly matched with ${playerScore} games tied!`);
+		return 'Tie game!';
+	}
+	console.log('Enter "playRound()" to continue!');
 }
+
+playGame();
