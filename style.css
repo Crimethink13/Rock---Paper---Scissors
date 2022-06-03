@@ -1,5 +1,79 @@
-.btn-container {
+body {
+	background-color: #000000;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.title {
+	padding-top: 30em;
+	font-size: 5rem;
+	display: inline;
+}
+
+.title1 {
+	text-shadow: 0 0 0.5rem #ffd300;
+}
+
+.title2 {
+	text-shadow: 0 0 0.5rem #a1ff0a;
+}
+
+.title3 {
+	text-shadow: 0 0 0.5rem #0aefff;
+}
+
+.game-area {
+	height: 70vh;
+	width: auto;
+	margin: 5em 10em;
+	/* border: 0.5rem solid #6fffe9; */
 	display: flex;
 	justify-content: center;
+}
+
+.btn-container {
+	/* border: 0.5rem solid hotpink; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	align-items: center;
+	gap: 1rem;
+	flex: auto;
+}
+
+.btn {
+	/* border: 0.5rem solid greenyellow; */
+	width: 15em;
+	height: 15em;
+	filter: drop-shadow(0 0 0.5rem #ffffff);
+	transition: 0.3s;
+}
+
+.btn1:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5rem #ffd300);
+}
+.btn2:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5rem #a1ff0a);
+}
+.btn3:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5rem #0aefff);
+}
+
+@media (max-width: 830px) {
+	.btn {
+		width: 10em;
+		height: 10em;
+		display: flex;
+		flex-direction: column;
+		border: 0.5rem solid hotpink;
+	}
+}
+
+@media (max-width: 830px) {
+	.title {
+		font-size: 4rem;
+	}
 }
