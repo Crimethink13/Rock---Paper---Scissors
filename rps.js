@@ -15,54 +15,51 @@ function playGame() {
 	let playerScore = 0;
 	let proceed = 0;
 
-	//? Loop for 5 rounds
-	for (let i = 0; i < 2; i++) {
-		//? Loop while input is incorrect
-		while (proceed === 0) {
-			playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
-			if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
-				proceed++;
-			}
+	//? Loop while input is incorrect
+	while (proceed === 0) {
+		playerChoice = prompt('Rock, Paper, Scissors?').toLowerCase().trim();
+		if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+			proceed++;
 		}
-
-		let cpuChoice = cpuSelection();
-
-		//? Determine outcome of one round
-		function playRound(playerChoice, cpuChoice) {
-			let choices = playerChoice + ' ' + cpuChoice;
-			switch (choices) {
-				case 'rock scissors':
-				case 'paper rock':
-				case 'scissors paper':
-					playerScore++;
-					return 'You Win!';
-
-				case 'scissors rock':
-				case 'rock paper':
-				case 'paper scissors':
-					cpuScore++;
-					return 'You Lose!';
-
-				case 'rock rock':
-				case 'paper paper':
-				case 'scissors scissors':
-					return 'Tie Game!';
-
-				default:
-					'Invalid choice';
-			}
-		}
-
-		//? Print results of one round
-		let winner = playRound(playerChoice, cpuChoice);
-		console.log('----------------------------------');
-		console.log(winner);
-		console.log(`You picked: ${playerChoice} || CPU picked: ${cpuChoice}`);
-		console.log(`Your score: ${playerScore} || CPU score: ${cpuScore}`);
-		proceed--;
-
-		//? 5 game loop finishes here
 	}
+
+	let cpuChoice = cpuSelection();
+
+	//? Determine outcome of one round
+	function playRound(playerChoice, cpuChoice) {
+		let choices = playerChoice + ' ' + cpuChoice;
+		switch (choices) {
+			case 'rock scissors':
+			case 'paper rock':
+			case 'scissors paper':
+				playerScore++;
+				return 'You Win!';
+
+			case 'scissors rock':
+			case 'rock paper':
+			case 'paper scissors':
+				cpuScore++;
+				return 'You Lose!';
+
+			case 'rock rock':
+			case 'paper paper':
+			case 'scissors scissors':
+				return 'Tie Game!';
+
+			default:
+				'Invalid choice';
+		}
+	}
+
+	//? Print results of one round
+	let winner = playRound(playerChoice, cpuChoice);
+	console.log('----------------------------------');
+	console.log(winner);
+	console.log(`You picked: ${playerChoice} || CPU picked: ${cpuChoice}`);
+	console.log(`Your score: ${playerScore} || CPU score: ${cpuScore}`);
+	proceed--;
+
+	//? 5 game loop finishes here
 
 	//? Print final results of 5 rounds
 	console.log('----------------------------------');
