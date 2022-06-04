@@ -49,26 +49,26 @@ body {
 	transition: 0.3s;
 }
 
-.btn1:hover {
+#rock:hover {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 0.5rem #ffd300);
 }
-.btn2:hover {
+#paper:hover {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 0.5rem #a1ff0a);
 }
-.btn3:hover {
+#scissors:hover {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 0.5rem #0aefff);
 }
 
 @media (max-width: 830px) {
 	.btn {
-		width: 10em;
-		height: 10em;
+		width: 13em;
+		height: 13em;
 		display: flex;
 		flex-direction: column;
-		border: 0.5rem solid hotpink;
+		/* border: 0.5rem solid hotpink; */
 	}
 }
 
