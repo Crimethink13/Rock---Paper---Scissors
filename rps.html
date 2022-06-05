@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"></link>
-    <title>Rock - Paper - Scissors!</title>
+    <title>Rock Paper Scissors!</title>
 </head>
 <body>
-    <h1 class="title title1">Rock </h1>
-    <h1 class="title title2"> Paper </h1>
-    <h1 class="title title3"> Scissors</h1>
+    <main class="wrapper">
+        <div class="title">
+            <h1 class="title title1">Rock </h1>
+            <h1 class="title title2"> Paper </h1>
+            <h1 class="title title3"> Scissors</h1>
+        </div>
+        <h3 class="">Best of Five</h3>
 
-    
-
-    <div class="game-area">
         <div class="btn-container">
             <div>
                 <input class="btn" id="rock" type="image" src="imgs/hand.png">
@@ -26,18 +27,27 @@
                 <input class="btn" id="scissors" type="image" src="imgs/scissors.png">
             </div>
         </div>
-    </div>
 
-    <div class="results"></div>
+        <div class = "results-area">
+            <div class="gaymers">
+                <h3>You</h3>
+                <div class="player"></div>
+            </div>
+            <div class="gaymers">
+                <h3>Comp</h3>  
+                <div class="computer"></div>
+            </div>
+        </div>
+        <div class="winner-area">
+            <h3 class="winner"></h3>
+        </div>
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/concert" title="concert icons" target="_blank">Concert icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/toilet-paper" title="toilet paper icons" target="_blank">Toilet paper icons created by bqlqn - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons" target="_blank">Scissors icons created by Freepik - Flaticon</a>
+        </footer>
+</main>
 
-
-
-
-<footer>
-    <a href="https://www.flaticon.com/free-icons/concert" title="concert icons">Concert icons created by Freepik - Flaticon</a>
-    <a href="https://www.flaticon.com/free-icons/toilet-paper" title="toilet paper icons">Toilet paper icons created by bqlqn - Flaticon</a>
-    <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons">Scissors icons created by Freepik - Flaticon</a>
-</footer>
     <script src="rps.js"></script>
 </body>
 </html>
