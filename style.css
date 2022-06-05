@@ -1,17 +1,23 @@
 body {
 	background-color: #000000;
 	text-align: center;
-	margin-top: 5rem;
+}
+
+.wrapper {
+	height: 100vh;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .title {
-	padding-top: 30em;
 	font-size: 5rem;
 	display: inline;
 }
 
 .title1 {
-	text-shadow: 0 0 0.5rem #ffd300;
+	text-shadow: 0 0 0.5rem #0aefff;
 }
 
 .title2 {
@@ -19,26 +25,18 @@ body {
 }
 
 .title3 {
-	text-shadow: 0 0 0.5rem #0aefff;
-}
-
-.game-area {
-	height: 70vh;
-	width: auto;
-	margin: 5em 10em;
-	/* border: 0.5rem solid #6fffe9; */
-	display: flex;
-	justify-content: center;
+	text-shadow: 0 0 0.5rem #ffd300;
 }
 
 .btn-container {
 	/* border: 0.5rem solid hotpink; */
+	margin: 5rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 	gap: 1rem;
-	flex: auto;
+	flex: 1;
 }
 
 .btn {
@@ -49,9 +47,67 @@ body {
 	transition: 0.3s;
 }
 
+.results-area {
+	/* border: 0.5rem solid turquoise; */
+	white-space: pre;
+	font-size: 3rem;
+	font-weight: bold;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	flex: 1;
+}
+
+.gaymers {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+h3 {
+	font-size: 4rem;
+	font-weight: bold;
+	margin: 1rem 0;
+	filter: drop-shadow(0 0 0.5rem #b700ff);
+}
+.player {
+	filter: drop-shadow(0 0 0.5rem #0aefff);
+}
+
+.computer {
+	filter: drop-shadow(0 0 0.5rem #ffd300);
+}
+
+.winner-area {
+	margin-bottom: 3rem;
+	white-space: pre;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+}
+
+.winner {
+	filter: drop-shadow(0 0 0.5rem #a1ff0a);
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+footer {
+	background-color: white;
+	font-size: 1.3rem;
+	display: flex;
+	justify-content: space-evenly;
+}
 #rock:hover {
 	transform: scale(1.1);
-	filter: drop-shadow(0 0 0.5rem #ffd300);
+	filter: drop-shadow(0 0 0.5rem #0aefff);
 }
 #paper:hover {
 	transform: scale(1.1);
@@ -59,7 +115,7 @@ body {
 }
 #scissors:hover {
 	transform: scale(1.1);
-	filter: drop-shadow(0 0 0.5rem #0aefff);
+	filter: drop-shadow(0 0 0.5rem #ffd300);
 }
 
 @media (max-width: 830px) {
@@ -75,5 +131,11 @@ body {
 @media (max-width: 830px) {
 	.title {
 		font-size: 4rem;
+	}
+}
+
+@media (max-width: 830px) {
+	.results-area {
+		flex-direction: column;
 	}
 }
