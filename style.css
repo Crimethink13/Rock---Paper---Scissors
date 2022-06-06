@@ -16,47 +16,63 @@ body {
 	display: inline;
 }
 
-.title1 {
+.choose {
+	filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+
+.title1,
+.win,
+.player,
+.final1 {
 	text-shadow: 0 0 0.5rem #0aefff;
 }
 
-.title2 {
+.title2,
+.tie,
+.final2 {
 	text-shadow: 0 0 0.5rem #a1ff0a;
 }
 
-.title3 {
+.title3,
+.lose,
+.computer,
+.final3 {
 	text-shadow: 0 0 0.5rem #ffd300;
 }
 
 .btn-container {
-	/* border: 0.5rem solid hotpink; */
-	margin: 5rem 0;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: 5rem;
 	flex: 1;
 }
 
 .btn {
-	/* border: 0.5rem solid greenyellow; */
-	width: 15em;
-	height: 15em;
+	width: 13em;
+	height: 13em;
 	filter: drop-shadow(0 0 0.5rem #ffffff);
 	transition: 0.3s;
 }
 
 .results-area {
-	/* border: 0.5rem solid turquoise; */
 	white-space: pre;
 	font-size: 3rem;
 	font-weight: bold;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	gap: 10rem;
 	flex: 1;
+}
+
+.btn-choice {
+	cursor: default;
+	width: 10em;
+	height: 10em;
+	filter: drop-shadow(0 0 0.5rem #ffffff);
 }
 
 .gaymers {
@@ -65,33 +81,25 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex: 1;
+	/* flex: 1; */
 }
 
 h3 {
 	font-size: 4rem;
 	font-weight: bold;
 	margin: 1rem 0;
-	filter: drop-shadow(0 0 0.5rem #b700ff);
-}
-.player {
-	filter: drop-shadow(0 0 0.5rem #0aefff);
 }
 
-.computer {
-	filter: drop-shadow(0 0 0.5rem #ffd300);
+.outcome {
+	font-size: 6rem;
 }
 
 .winner-area {
-	margin-bottom: 3rem;
+	margin-top: 1rem;
 	white-space: pre;
 	display: flex;
 	justify-content: center;
-	flex: 1;
-}
-
-.winner {
-	filter: drop-shadow(0 0 0.5rem #a1ff0a);
+	align-items: center;
 }
 
 a {
@@ -105,6 +113,7 @@ footer {
 	display: flex;
 	justify-content: space-evenly;
 }
+
 #rock:hover {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 0.5rem #0aefff);
@@ -124,7 +133,6 @@ footer {
 		height: 13em;
 		display: flex;
 		flex-direction: column;
-		/* border: 0.5rem solid hotpink; */
 	}
 }
 
@@ -136,6 +144,7 @@ footer {
 
 @media (max-width: 830px) {
 	.results-area {
+		gap: 0;
 		flex-direction: column;
 	}
 }
