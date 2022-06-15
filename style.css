@@ -41,6 +41,7 @@ body {
 }
 
 .btn-container {
+	margin: 3rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -95,11 +96,41 @@ h3 {
 }
 
 .winner-area {
-	margin-top: 1rem;
-	white-space: pre;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+dialog {
+	border-radius: 1em;
+	background-color: black;
+	box-shadow: 0 0 1rem #0aefff;
+}
+
+dialog::backdrop {
+	backdrop-filter: blur(0.3em);
+}
+
+.final-message {
+	margin: 1rem 0;
+	font-size: 4rem;
+	font-weight: bold;
+	filter: drop-shadow(0 0 0.5rem #ffffff);
+}
+
+.final-images {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	gap: 5em;
+}
+
+.popup-image {
+	margin: 2rem 0;
+	width: 13em;
+	height: 13em;
+	filter: drop-shadow(0 0 0.5rem #ffffff);
+	transition: 0.3s;
 }
 
 a {
@@ -125,6 +156,16 @@ footer {
 #scissors:hover {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 0.5rem #ffd300);
+}
+
+#yes:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5rem #a1ff0a);
+}
+
+#no:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5rem #ff0000);
 }
 
 @media (max-width: 830px) {
