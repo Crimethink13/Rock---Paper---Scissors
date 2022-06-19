@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="all-content">
+            <div class="title">
+                <h1 class="title title1">Rock </h1>
+                <h1 class="title title2"> Paper </h1>
+                <h1 class="title title3"> Scissors</h1>
+            </div>
+
+            <div class = "results-area">
+                <div class="gaymers">
+                    <h3 class="title1">You</h3>
+                    <input type="image" class="btn-choice" id="player-choice" src="imgs/question.png">
+                    <h3 class="player">0</h3>
+                </div>
+                <div class="outcome">=</div>
+                <div class="gaymers">
+                    <h3 class="title3">Comp</h3>
+                    <input type="image" class="btn-choice" id="cpu-choice" src="imgs/question.png">  
+                    <h3 class="computer">0</h3>
+                </div>
+            </div>
+
+            <div class="winner-area">
+                <h3 class="weapon choose">First to 5 Wins</h3>
+            </div>
+
+            <div class="btn-container">
+                <div>
+                    <input class="btn" id="rock" type="image" src="imgs/rock.png">
+                </div>
+                <div>
+                    <input class="btn" id="paper" type="image" src="imgs/paper.png">
+                </div>
+                <div>
+                    <input class="btn" id="scissors" type="image" src="imgs/scissors.png">
+                </div>
+            </div>
+        </div>
+
+        <dialog class="popup-area">
+                <h3 class="title final1">You </h3>
+                <h3 class="title final2">Are </h3>
+                <h3 class="title final3"></h3>
+                <div class="final-message">Play Again?</div>
+            <div class="final-images">
+                <input type="image" id="yes" class="popup-image" src="imgs/up.png">
+                <input type="image" id="no" class="popup-image" src="imgs/down.png">    
+            </div>
+        </dialog>
+
+        <footer>
+            <a href="https://www.flaticon.com/free-icons/concert" title="concert icons" target="_blank">Concert icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/toilet-paper" title="toilet paper icons" target="_blank">Toilet paper icons created by bqlqn - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons" target="_blank">Scissors icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/question-mark" title="question mark icons">Question mark icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/like" title="like icons">Like icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/middle-finger" title="middle finger icons">Middle finger icons created by Freepik - Flaticon</a>
+        </footer>
+    </main>
+
+    <script src="rps.js"></script>
+</body>
+</html>
